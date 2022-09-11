@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+    <h1>Cars Table</h1>
+<div>
+<table th:border="1" th:width="300">
+<thead>
+    <tr>
+        <th scope="col">Brand</th>
+        <th scope="col">Model</th>
+        <th scope="col">Color</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr th:each="car : ${cars}">
+        <td th:utext="${car.brand}"></td>
+        <td th:utext="${car.model}"></td>
+        <td th:utext="${car.color}"></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+</body>
+</html>
